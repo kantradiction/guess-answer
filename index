@@ -22,6 +22,8 @@
 
 				var userAnswer;
 
+				var userscore = 0;
+
 				var questions = {
 					q1: ["what is the answer to question 1?", true],
 					q2: ["what is the answer to question 2?", false],
@@ -48,9 +50,10 @@
 					userAnswer = this.value;
 
 					if (userAnswer = Object.values(questions)[i][1]) {
-						alert("you won!");
+						userscore++;
+						alert("you answered correctly.. your score is: " + userscore);
 					} else {
-						alert("you lost!");
+						alert("you answered incorrectly.. your score is: " + userscore);
 					}
 				})
 
