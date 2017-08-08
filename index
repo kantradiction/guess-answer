@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div >
+			<h1>Question:</h1>
+			<h2></h2>
+
+			<button value="true">true</button>
+			<button value="false">false</button>
+		</div>
+		
+
+		<script>
+		
+
+				/*console.log(Object.values(questions)[1][1]);*/
+				var i = 0;
+
+				var userAnswer;
+
+				var questions = {
+					q1: ["what is the answer to question 1?", true],
+					q2: ["what is the answer to question 2?", false],
+					q3: ["what is the answer to question 3?", true],
+					q4: ["what is the answer to question 4?", false],
+					q5: ["what is the answer to question 5?", true],
+					q6: ["what is the answer to question 6?", false],
+					q7: ["what is the answer to question 7?", true],
+					q8: ["what is the answer to question 8?", false],
+					q9: ["what is the answer to question 9?", true],
+					q10: ["what is the answer to question 10?", false]
+				};
+
+				function newQuestion() {
+					$("h2").html(Object.values(questions)[i][0]);
+					console.log(Object.values(questions)[i][1]);
+				};
+
+				newQuestion();
+
+				$("button").click(function() {
+					i++;
+					newQuestion();
+					userAnswer = this.value;
+
+					if (userAnswer = Object.values(questions)[i][1]) {
+						alert("you won!");
+					} else {
+						alert("you lost!");
+					}
+				})
+
+
+		</script>
+	</body>
+</html>
